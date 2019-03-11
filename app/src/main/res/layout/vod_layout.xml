@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_20dp"
+    android:background="@color/vod_back_color">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <com.duosat.tv.view.ViewPagerCarouselView
+            android:id="@+id/carousel_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_160dp"
+            android:focusable="false"
+            android:background="@color/vod_menu_select_color">
+        </com.duosat.tv.view.ViewPagerCarouselView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/vod_menu_select_color"
+            android:text="@string/novidades_vod"/>
+
+        <ListView
+            android:id="@+id/lvMenuList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="5dp"
+            android:background="@color/listview_back_color"
+            android:scrollbars="none">
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:background="@color/listview_back_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/img_size_33dp"
+                android:layout_height="@dimen/img_size_33dp"
+                android:padding="@dimen/pad_5dp"
+                android:paddingLeft="-5dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:src="@drawable/search_vod_btn"/>
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/img_size_20dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/pad_5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/search_hint"
+                android:inputType="text"
+                android:imeOptions="actionSearch|flagNoExtractUi"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/videoteca_btn"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:text="@string/menu_noticas"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gvVodList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:padding="@dimen/pad_5dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:gravity="center"
+        android:columnWidth="@dimen/grid_item_size_large"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:listSelector="@drawable/selection_back_video_theme"
+        android:divider="@android:color/transparent"
+        android:horizontalSpacing="@dimen/pad_5dp"
+        android:verticalSpacing="@dimen/pad_5dp" />
+</LinearLayout>

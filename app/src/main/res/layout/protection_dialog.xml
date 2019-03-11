@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/pad_10dp"
+    android:background="@drawable/protect_rect"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:text="Please Confirm Account Password"
+        android:textSize="@dimen/font_15sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivUserType"
+            android:layout_width="@dimen/height_60dp"
+            android:layout_height="@dimen/height_60dp"
+            android:src="@drawable/system_users"/>
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="@dimen/grid_item_size_large"
+            android:layout_height="@dimen/password_height"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textAlignment="center"
+            android:maxLength="4"
+            android:inputType="numberPassword"
+            android:imeOptions="flagNoExtractUi"
+            android:textSize="@dimen/font_15sp"/>
+    </LinearLayout>
+</LinearLayout>

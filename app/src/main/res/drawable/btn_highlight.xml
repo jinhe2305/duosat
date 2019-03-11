@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/darker_gray"    android:state_pressed="true" />
+    <item android:state_focused="true" >
+        <shape>
+            <solid android:color="@color/colorPrimaryDark" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/theme_color" />
+        </shape>
+    </item>
+    <item android:drawable="@color/colorPrimaryDark" />
+</selector>

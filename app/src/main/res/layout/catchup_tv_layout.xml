@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/pad_10dp"
+    android:background="@color/catchup_back_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/pad_20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ID_CURRENT_CHANNEL_LOGO"
+                    android:layout_width="@dimen/img_size_44dp"
+                    android:layout_height="@dimen/img_size_33dp"
+                    android:layout_marginTop="@dimen/margin_5dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ID_TEXT_CHANNEL_NAME"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Game of Thrones: Season 5"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_30sp" />
+
+                    <TextView
+                        android:id="@+id/ID_TEXT_CHANNEL_GENRE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="16 | 57 min | Action, Adventure, Drama | TV series(2017)"
+                        android:textSize="@dimen/font_15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ID_TEXT_GUIDE_MARK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/catchup_mark_back"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="TV-G"
+                    android:textAlignment="center"
+                    android:textColor="@color/catchup_back_color"
+                    android:textSize="@dimen/font_20sp" />
+
+                <TextView
+                    android:id="@+id/ID_TEXT_EPG_DURATION"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="12:30 - 1:00 pm"
+                    android:textSize="@dimen/font_30sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/img_size_20dp"
+                    android:layout_height="@dimen/img_size_20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:src="@drawable/yellow_star" />
+
+                <TextView
+                    android:id="@+id/ID_TEXT_EPG_MARK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:maxLines="1"
+                    android:text="7.9"
+                    android:textSize="@dimen/font_30sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ID_TEXT_EPG_DESCRIPTION"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_weight="1"
+                android:maxLines="4"
+                android:text="This is a test description."
+                android:textSize="@dimen/font_15sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/img_size_44dp"
+                android:layout_height="@dimen/img_size_33dp"
+                android:src="@drawable/duotv_button"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="GUIA DE CANAIS"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:layout_marginTop="@dimen/margin_5dp">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/ID_HEAD_VIDEO_VIEW"
+                android:layout_width="@dimen/player_width"
+                android:layout_height="@dimen/player_height"
+                android:background="@android:color/black"
+                app:use_controller="false">
+
+                <ProgressBar
+                    android:id="@+id/pbProgress"
+                    android:layout_width="@dimen/progress_size"
+                    android:layout_height="@dimen/progress_size"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/progress_icon"
+                    android:layout_centerInParent="true"/>
+            </com.google.android.exoplayer2.ui.PlayerView>
+
+            <TextView
+                android:id="@+id/tvMaintainence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:text="UNDER MAINTAINENCE"
+                android:textSize="@dimen/font_20sp"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_size_25dp"
+                android:src="@drawable/power"/>
+
+            <ListView
+                android:id="@+id/ID_GENRE_LIST"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_7dp"
+                android:background="@color/listview_back_color"
+                android:divider="@android:color/transparent"
+                android:nextFocusRight="@id/lvliveChannelMenu">
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:layout_marginLeft="@dimen/margin_15dp"
+            android:orientation="vertical">
+
+            <com.duosat.tv.view.EPGView
+                android:id="@+id/ID_CATUP_TV_VIEW"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:focusable="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/listview_back_color_trans">
+
+                        <TextView
+                            android:id="@+id/ID_TEXT_TODAY"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp"
+                            android:layout_marginLeft="192dp"
+                            android:text="HOJE"
+                            android:textSize="@dimen/font_10sp"
+                            android:textColor="@android:color/white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ID_CATUP_TV_DATE_BAR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/vod_back_color">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="@dimen/img_size_33dp"
+                        android:layout_height="@dimen/img_size_12dp"
+                        android:layout_marginLeft="@dimen/margin_15dp"
+                        android:background="@android:color/holo_blue_bright"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_size_33dp"
+                        android:layout_marginLeft="@dimen/margin_7dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/white"
+                        android:text="Programacao"/>
+
+                    <View
+                        android:layout_width="@dimen/img_size_33dp"
+                        android:layout_height="@dimen/img_size_12dp"
+                        android:layout_marginLeft="@dimen/margin_15dp"
+                        android:background="@android:color/holo_red_light"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_size_33dp"
+                        android:layout_marginLeft="@dimen/margin_7dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/white"
+                        android:text="Favourite"/>
+
+                    <View
+                        android:layout_width="@dimen/img_size_33dp"
+                        android:layout_height="@dimen/img_size_12dp"
+                        android:layout_marginLeft="@dimen/margin_15dp"
+                        android:background="@android:color/holo_orange_light"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_size_33dp"
+                        android:layout_marginLeft="@dimen/margin_7dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/white"
+                        android:text="Notificar"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/ID_CURRENT_DATE_TIME"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_size_33dp"
+                        android:layout_marginEnd="@dimen/margin_15dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/white"
+                        android:text="Sab 21 abr 12:30"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="panel_back">#353535</color>
+    <color name="theme_color">#ffffff</color>
+    <color name="vod_back_color">#002a40</color>
+    <color name="catchup_back_color">#001018</color>
+    <color name="vod_menu_select_color">#00365a</color>
+    <color name="listview_back_color">#00467d</color>
+    <color name="listview_back_color_trans">#a000467d</color>
+    <color name="listview_channel_color">#a0023c5a</color>
+    <color name="listview_channel_focus_color">#f7023c6a</color>
+    <color name="black_trans_color1">#7f000000</color>
+</resources>

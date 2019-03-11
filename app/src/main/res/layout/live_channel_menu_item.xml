@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/pad_5dp"
+    android:background="@drawable/channel_menu_item"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivChannelThumb"
+            android:layout_width="@dimen/img_size_44dp"
+            android:layout_height="@dimen/img_size_33dp"
+            android:adjustViewBounds="true"
+            android:layout_marginRight="@dimen/pad_5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/tvchannelNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/pad_2dp"
+            android:layout_toRightOf="@+id/ivChannelThumb"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="@dimen/font_15sp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tvchannelName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_toRightOf="@+id/tvchannelNumber"
+            android:layout_toLeftOf="@+id/ivLike"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="@dimen/font_15sp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/ivLike"
+            android:layout_width="@dimen/img_size_33dp"
+            android:layout_height="@dimen/img_size_33dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:src="@drawable/videoteca"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lldetails"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:focusable="false">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_10sp"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_10sp"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/font_10sp"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

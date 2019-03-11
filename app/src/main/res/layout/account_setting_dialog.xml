@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/pad_10dp"
+    android:orientation="vertical"
+    android:background="@drawable/protect_rect">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_15sp"
+        android:text="Account Settings"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivUserType"
+                android:layout_width="@dimen/height_60dp"
+                android:layout_height="@dimen/height_60dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/system_users"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Account ID"/>
+
+                <EditText
+                    android:id="@+id/edtAccountID"
+                    android:layout_width="@dimen/password_width"
+                    android:layout_height="@dimen/password_height"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_alignParentRight="true"
+                    android:focusable="false"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:inputType="text"
+                    android:textSize="@dimen/font_15sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Account Password"/>
+
+                <EditText
+                    android:id="@+id/edtAccountPassword"
+                    android:layout_width="@dimen/password_width"
+                    android:layout_height="@dimen/password_height"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_alignParentRight="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:textSize="@dimen/font_15sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Subscribed"/>
+
+                <CheckBox
+                    android:id="@+id/chboxSubcribed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/height_60dp"
+                android:layout_height="@dimen/height_60dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/user"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Adult Channel Password"/>
+
+                <EditText
+                    android:id="@+id/edtAdultPassword"
+                    android:layout_width="@dimen/password_width"
+                    android:layout_height="@dimen/password_height"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_alignParentRight="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:textSize="@dimen/font_15sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOkBtn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/pad_10dp"
+        android:focusable="true"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@drawable/button_back"
+        android:text="OK"/>
+
+</LinearLayout>

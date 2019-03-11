@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_launcher"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_60dp"
+            android:layout_marginTop="@dimen/margin_20dp">
+
+            <RelativeLayout
+                android:id="@+id/local_focus_rl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:textSize="@dimen/font_40sp"
+                    android:text="16:39"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/tvTime"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_20sp"
+                        android:text="02/04/18"/>
+
+                    <TextView
+                        android:id="@+id/tvLocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_20sp"
+                        android:text="test"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ivusb"
+                        android:layout_width="@dimen/img_size_30dp"
+                        android:layout_height="@dimen/img_size_30dp"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/usb"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"/>
+
+                    <ImageView
+                        android:id="@+id/ivlan"
+                        android:layout_width="@dimen/img_size_30dp"
+                        android:layout_height="@dimen/img_size_30dp"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:layout_toRightOf="@id/ivusb"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:background="@drawable/lan"/>
+
+                    <ImageView
+                        android:id="@+id/ivwifi"
+                        android:layout_width="@dimen/img_size_30dp"
+                        android:layout_height="@dimen/img_size_30dp"
+                        android:layout_marginRight="@dimen/margin_10dp"
+                        android:layout_toRightOf="@id/ivlan"
+                        android:layout_centerVertical="true"
+                        android:focusable="false"
+                        android:background="@drawable/wifi"/>
+
+                    <ImageView
+                        android:id="@+id/ivlogin"
+                        android:layout_width="@dimen/img_size_30dp"
+                        android:layout_height="@dimen/img_size_30dp"
+                        android:layout_marginRight="@dimen/margin_20dp"
+                        android:layout_toRightOf="@id/ivwifi"
+                        android:layout_centerVertical="true"
+                        android:focusable="true"
+                        android:nextFocusLeft="@id/rlvodtv"
+                        android:background="@drawable/login_item"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rllaunchPage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="@dimen/launch_size"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_middle"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:indeterminateDrawable="@drawable/progress_icon"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@+id/img_logo"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="@dimen/launch_duosat_size"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/logo_bottom_right" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlmainPage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_80dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="@dimen/main_duosat_size"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/logo_middle"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/main_duosat_size"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/logo_bottom_right"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/margin_20dp"
+                    android:paddingRight="@dimen/margin_20dp"
+                    android:paddingBottom="@dimen/margin_20dp"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:id="@+id/rlduosattv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:focusable="true"
+                        android:nextFocusRight="@id/rlvodtv"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/sel_focus"
+                        android:nextFocusUp="@id/ivlogin"
+                        app:layout_constraintDimensionRatio="h,1.86:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <ImageView
+                            android:id="@+id/ivduosattv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/duotv_button_focus" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlvodtv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:focusable="true"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/sel_focus"
+                        android:nextFocusRight="@id/ivlogin"
+                        android:nextFocusUp="@id/ivlogin"
+                        app:layout_constraintDimensionRatio="h,1.86:1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/rlduosattv"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <ImageView
+                            android:id="@+id/ivvod"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/vod_button"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlcatchuptv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:focusable="true"
+                        android:nextFocusRight="@id/rlaccountSetting"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/sel_focus"
+                        app:layout_constraintDimensionRatio="h,1.86:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rlduosattv"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <ImageView
+                            android:id="@+id/ivcatchuptv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/catchup_tv"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlaccountSetting"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/margin_10dp"
+                        android:focusable="true"
+                        android:nextFocusRight="@id/ivlogin"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/sel_focus"
+                        app:layout_constraintDimensionRatio="h,1.86:1"
+                        app:layout_constraintLeft_toRightOf="@+id/rlsetting"
+                        app:layout_constraintTop_toBottomOf="@id/rlvodtv"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <ImageView
+                            android:id="@+id/ivaccountsetting"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/accountsettings"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlsetting"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:focusable="true"
+                        android:nextFocusRight="@id/rlsetting"
+                        android:padding="@dimen/pad_5dp"
+                        android:background="@drawable/sel_focus"
+                        app:layout_constraintDimensionRatio="h,1.86:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rlcatchuptv"
+                        app:layout_constraintWidth_percent="0.2">
+
+                        <ImageView
+                            android:id="@+id/ivlargesettings"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/settings"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/margin_20dp"
+                        android:layout_marginRight="@dimen/margin_20dp"
+                        android:background="@android:color/background_dark"
+                        app:layout_constraintDimensionRatio="h,16:9"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.56"
+                        app:layout_constraintStart_toEndOf="@id/rlvodtv">
+
+                        <com.google.android.exoplayer2.ui.PlayerView
+                            android:id="@+id/video_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:use_controller="false">
+                            <ProgressBar
+                                android:id="@+id/pbProgress"
+                                android:layout_width="@dimen/progress_size"
+                                android:layout_height="@dimen/progress_size"
+                                android:layout_gravity="center"
+                                android:indeterminate="true"
+                                android:indeterminateDrawable="@drawable/progress_icon"
+                                android:layout_centerInParent="true"
+                                android:visibility="gone"/>
+                        </com.google.android.exoplayer2.ui.PlayerView>
+                        <TextView
+                            android:id="@+id/tvMaintainence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminate="true"
+                            android:layout_centerInParent="true"
+                            android:text="UNDER MAINTAINENCE"
+                            android:textSize="@dimen/font_20sp"
+                            android:textColor="@android:color/white"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

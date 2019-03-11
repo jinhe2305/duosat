@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="password_height">40dp</dimen>
+    <dimen name="password_width">160dp</dimen>
+    <dimen name="launch_size">320dp</dimen>
+    <dimen name="launch_duosat_size">160dp</dimen>
+    <dimen name="main_duosat_size">180dp</dimen>
+
+    <dimen name="height_60dp">60dp</dimen>
+    <dimen name="height_80dp">80dp</dimen>
+    <dimen name="height_160dp">160dp</dimen>
+
+    <dimen name="grid_item_size_large">120dp</dimen>
+    <dimen name="grid_item_video_height">135dp</dimen>
+    <dimen name="grid_item_desc_height">32dp</dimen>
+    <dimen name="grid_item_kind_height">20dp</dimen>
+
+    <dimen name="logo_size">200dp</dimen>
+    <dimen name="btn_login_size">150dp</dimen>
+    <dimen name="progress_size">60dp</dimen>
+
+    <dimen name="dialog_video_width">160dp</dimen>
+    <dimen name="dialog_video_height">240dp</dimen>
+
+    <dimen name="dialog_screenshot_image_width">262dp</dimen>
+
+    <dimen name="video_timebar_height">26dp</dimen>
+    <dimen name="video_bar_height">42dp</dimen>
+    <dimen name="video_btn_size">32dp</dimen>
+
+    <dimen name="player_height">180dp</dimen>
+    <dimen name="player_width">320dp</dimen>
+
+    <dimen name="img_size_12dp">12dp</dimen>
+    <dimen name="img_size_20dp">20dp</dimen>
+    <dimen name="img_size_25dp">25dp</dimen>
+    <dimen name="img_size_30dp">30dp</dimen>
+    <dimen name="img_size_33dp">33dp</dimen>
+    <dimen name="img_size_44dp">44dp</dimen>
+    <dimen name="img_size_45dp">45dp</dimen>
+    <dimen name="img_size_70dp">70dp</dimen>
+    <dimen name="img_size_100dp">100dp</dimen>
+
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+
+    <dimen name="pad_20dp">20dp</dimen>
+    <dimen name="pad_10dp">10dp</dimen>
+    <dimen name="pad_5dp">5dp</dimen>
+    <dimen name="pad_2dp">2dp</dimen>
+
+    <dimen name="font_60sp">60sp</dimen>
+    <dimen name="font_40sp">40sp</dimen>
+    <dimen name="font_30sp">30sp</dimen>
+    <dimen name="font_20sp">20sp</dimen>
+    <dimen name="font_15sp">15sp</dimen>
+    <dimen name="font_10sp">10sp</dimen>
+    <dimen name="font_5sp">5sp</dimen>
+
+    <dimen name="time_bar_height">30dp</dimen>
+    <dimen name="date_bar_width">560dp</dimen>
+</resources>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">NextTV</string>
+    <string name="novidades_vod">NOVIDADES VOD</string>
+    <string name="menu_films">FILMS</string>
+    <string name="menu_series">SERIES</string>
+    <string name="menu_infantil">INFANTIL</string>
+    <string name="menu_animes">ANIMES</string>
+    <string name="menu_noticas">NOTICIAS</string>
+    <string name="menu_lancamentos">LANCAMENTOS</string>
+
+    <string name="live_menu_search">SEARCH</string>
+    <string name="live_menu_favoritte">FAVORITE</string>
+    <string name="live_menu_all">TODOS</string>
+    <string name="live_menu_filmes">FILMES</string>
+    <string name="live_menu_noticias">NOTICIAS</string>
+    <string name="live_menu_aberto">ABERTO</string>
+    <string name="live_menu_infantil">INFANTIL</string>
+    <string name="live_menu_variedades">VARIEDADES</string>
+    <string name="live_menu_documentarios">DOCUMENTARIOS</string>
+    <string name="live_menu_adulto">ADULTO</string>
+    <string name="live_menu_religiosos">RELIGIOSOS</string>
+    <string name="live_menu_esports">ESPORT</string>
+    <string name="live_menu_4k">4K</string>
+
+    <string name="login">Log In</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="user_empty">Username is required</string>
+    <string name="password_empty">Password is required</string>
+    <string name="device_error">This device is not registered.</string>
+
+    <string name="search_hint">BUSCA</string>
+
+    <string name="connection_error">Network error: Connection timed out.</string>
+    <string name="xml_parsing_error">Server error: Invalid response from server.</string>
+
+    <string name="dvr">DVR</string>
+    <string name="package_error">You are not subscribed to this package</string>
+    <string name="backup_url_error">There is no backup Url.</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/grid_item_size_large"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/pad_2dp"
+    android:background="@drawable/selection_back_video_theme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grid_item_video_height"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_bottom_right" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grid_item_desc_height"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/img_size_30dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivDeu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cat_btn"/>
+
+                <ImageView
+                    android:id="@+id/ivNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/new_btn"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/pad_5dp"
+                android:background="@color/listview_back_color"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/videoteca"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:id="@+id/tvVideoName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:text="@string/menu_noticas"
+                    android:textSize="@dimen/font_10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivPlayButton"
+        android:layout_width="@dimen/img_size_33dp"
+        android:layout_height="@dimen/img_size_33dp"
+        android:src="@drawable/video_play"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

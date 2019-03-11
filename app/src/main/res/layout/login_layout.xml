@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_launcher"
+    tools:context=".main.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_20sp"
+                android:text="@string/login"
+                />
+            <ImageView
+                android:layout_width="@dimen/logo_size"
+                android:layout_height="@dimen/logo_size"
+                android:layout_margin="@dimen/pad_20dp"
+                android:src="@drawable/logo_middle"
+                android:layout_gravity="center" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/pad_20dp"
+                android:background="@drawable/back_white_rect"
+                android:visibility="gone">
+                <EditText
+                    android:id="@+id/edtUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_bg_selector"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:maxLength="200"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_20sp"
+                    android:textColorHint="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/user_name"/>
+                <TextView
+                    android:id="@+id/tvUserError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_10sp"
+                    android:gravity="end"
+                    android:textColor="@android:color/holo_red_light"/>
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_bg_selector"
+                    android:maxLines="1"
+                    android:maxLength="200"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_15sp"
+                    android:textColorHint="@android:color/white"
+                    android:hint="@string/password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"/>
+                <TextView
+                    android:id="@+id/tvPasswordError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_10sp"
+                    android:gravity="end"
+                    android:textColor="@android:color/holo_red_light"/>
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="@dimen/btn_login_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textSize="@dimen/font_15sp"
+                    android:textColor="@android:color/white"
+                    android:padding="@dimen/pad_5dp"
+                    android:background="@drawable/btn_highlight"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/pad_20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/back_white_rect"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvDeviceError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_20sp"
+                    android:gravity="center"
+                    android:text="@string/device_error"
+                    android:textColor="@android:color/holo_red_light" />
+
+                <Button
+                    android:id="@+id/btnLoginMac"
+                    android:layout_width="@dimen/btn_login_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:text="@string/login"
+                    android:textSize="@dimen/font_15sp"
+                    android:textColor="@android:color/white"
+                    android:padding="@dimen/pad_5dp"
+                    android:background="@drawable/btn_highlight"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pbProgress"
+        android:layout_width="@dimen/progress_size"
+        android:layout_height="@dimen/progress_size"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_icon"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

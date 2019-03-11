@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    tools:context=".main.LiveActivity">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player_view"
+        app:use_controller="false">
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+    <SurfaceView
+        android:id="@+id/video_surface"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+    </SurfaceView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/progress_icon"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvMaintainence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:text="UNDER MAINTAINENCE"
+        android:textSize="@dimen/font_40sp"
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvSelChannelNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/font_60sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/pad_5dp"
+        android:layout_marginRight="@dimen/pad_5dp"/>
+
+    <TextView
+        android:id="@+id/tvSelChannelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvSelChannelNumber"
+        android:textSize="@dimen/font_60sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/pad_2dp"
+        android:layout_marginRight="@dimen/pad_5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llMainMenu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/pad_5dp"
+            android:background="@color/listview_back_color_trans"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llSearchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/img_size_20dp"
+                    android:layout_height="@dimen/img_size_20dp"
+                    android:layout_marginLeft="@dimen/pad_5dp"
+                    android:src="@drawable/search" />
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/img_size_20dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/pad_5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/search_hint"
+                    android:textSize="@dimen/font_10sp"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch|flagNoExtractUi"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lvliveMainMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:nextFocusRight="@id/lvliveChannelMenu">
+            </ListView>
+        </LinearLayout>
+        
+        <ListView
+            android:id="@+id/lvliveChannelMenu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:layout_marginLeft="@dimen/pad_2dp"
+            android:listSelector="@color/listview_channel_focus_color"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"
+            android:nextFocusRight="@id/lvliveEpgMenu">
+        </ListView>
+
+        <ListView
+            android:id="@+id/lvliveEpgMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:layout_marginLeft="@dimen/pad_2dp"
+            android:listSelector="@color/listview_channel_focus_color"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp"
+            android:visibility="gone"
+            android:nextFocusLeft="@id/lvliveChannelMenu">
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>
